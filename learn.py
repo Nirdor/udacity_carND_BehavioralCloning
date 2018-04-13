@@ -17,12 +17,12 @@ with open('traindata/0/driving_log.csv') as f:
 with open('traindata/1/driving_log.csv') as f:
   reader = csv.reader(f)
   for line in reader:
-    lines.append((line, 0.6))
+    lines.append((line, 0.4))
 
 with open('traindata/-1/driving_log.csv') as f:
   reader = csv.reader(f)
   for line in reader:
-    lines.append((line, -0.6))
+    lines.append((line, -0.4))
 
 images = []
 measurements = []
@@ -47,8 +47,10 @@ y_train = np.array(measurements)
 
 print('Data ready. Create Model...')
 
-if os.path.exists('model.h5'):
-  model = load_model('model.h5', custom_objects = {'LRN':mod.LRN})
+model_name = 'model.h5'
+
+if os.path.exists(model_name):
+  model = load_model(model_name, custom_objects = {'LRN':mod.LRN})
 else:
   model = mod.createModel()
 
@@ -56,5 +58,5 @@ else:
 print('Model created. Start Learning...')
 model.fit(X_train, y_train, validation_split = 0.2, shuffle = True, nb_epoch = 1)
 print('Learning done!. Saving model...')
-model.save('model.h5')
+model.save(model_name)
 print('Finish!')
