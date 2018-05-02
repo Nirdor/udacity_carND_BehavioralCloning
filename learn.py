@@ -32,11 +32,14 @@ with open('traindata/recover/driving_log.csv') as f:
 images = []
 measurements = []
 for line, correction in lines:
-  image_center = cv2.imread(line[0])
+  image_name_center = '/'.join(line[0].split('\\')[-4:])
+  image_name_left = '/'.join(line[1].split('\\')[-4:])
+  image_name_right = '/'.join(line[2].split('\\')[-4:])
+  image_center = cv2.imread(image_name_center)
   image_center_flipped = np.fliplr(image_center)
-  image_left = cv2.imread(line[1])
+  image_left = cv2.imread(image_name_left)
   image_left_flipped = np.fliplr(image_left)
-  image_right = cv2.imread(line[2])
+  image_right = cv2.imread(image_name_right)
   image_right_flipped = np.fliplr(image_right)
   images.append(image_center)
   images.append(image_left)
@@ -71,7 +74,7 @@ else:
 
 
 print('Model created. Start Learning...')
-model.fit(X_train, y_train, validation_split = 0.2, shuffle = True, nb_epoch = 1)
+model.fit(X_train, y_train, validation_split = 0.2, shuffle = True, nb_epoch = 3)
 print('Learning done!. Saving model...')
 model.save(model_name)
 print('Finish!')
