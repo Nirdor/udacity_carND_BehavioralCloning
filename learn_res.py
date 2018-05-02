@@ -9,20 +9,20 @@ import model_res as mod
 
 print('Import Data...')
 lines = []
-# with open('traindata/0/driving_log.csv') as f:
-  # reader = csv.reader(f)
-  # for line in reader:
-    # lines.append((line, 0))
+with open('traindata/0/driving_log.csv') as f:
+  reader = csv.reader(f)
+  for line in reader:
+    lines.append((line, 0))
 
-# with open('traindata/1/driving_log.csv') as f:
-  # reader = csv.reader(f)
-  # for line in reader:
-    # lines.append((line, 0.3))
+with open('traindata/1/driving_log.csv') as f:
+  reader = csv.reader(f)
+  for line in reader:
+    lines.append((line, 0.3))
 
-# with open('traindata/-1/driving_log.csv') as f:
-  # reader = csv.reader(f)
-  # for line in reader:
-    # lines.append((line, -0.3))
+with open('traindata/-1/driving_log.csv') as f:
+  reader = csv.reader(f)
+  for line in reader:
+    lines.append((line, -0.3))
     
 with open('traindata/recover/driving_log.csv') as f:
   reader = csv.reader(f)
