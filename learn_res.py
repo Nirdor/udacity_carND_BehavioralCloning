@@ -74,7 +74,7 @@ else:
 
 
 print('Model created. Start Learning...')
-model.fit(X_train, y_train, validation_split = 0.2, shuffle = True, nb_epoch = 3)
+model.fit(X_train, y_train, validation_split = 0.1, shuffle = True, nb_epoch = 3)
 print('Learning done!. Saving model...')
 model.save(model_name)
 print('Finish!')
