@@ -84,6 +84,6 @@ def createModel():
   logits = Dense(1)(layer9)
 
   model = Model(input = inputs, output = logits)
-  model.compile(loss = 'mae', optimizer = 'adam')
+  model.compile(loss = 'mse', optimizer = 'adam')
 
   return model
