@@ -70,7 +70,7 @@ y_train = np.array(measurements)
 
 print('Data ready. Create Model...')
 
-model_name = 'model_inc5.h5'
+model_name = 'model_inc6.h5'
 
 if os.path.exists(model_name):
   model = load_model(model_name, custom_objects = {'LRN':mod.LRN})
