@@ -79,8 +79,11 @@ def createModel():
   #shape = (1, 1, 1024)
   flat = Flatten()(layer8)
   drop = Dropout(0.5)(flat)
+  
+  layer9 = Dense(512, activation = 'relu')(drop)
+  drop2 = Dropout(0.5)(layer9)
 
-  layer9 = Dense(256, activation = 'relu')(drop)
+  layer10 = Dense(256, activation = 'relu')(drop2)
   logits = Dense(1)(layer9)
 
   model = Model(input = inputs, output = logits)
