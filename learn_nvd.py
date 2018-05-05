@@ -33,6 +33,7 @@ with open('traindata/additional/driving_log.csv') as f:
   reader = csv.reader(f)
   for line in reader:
     lines.append((line, 0))
+    lines.append((line, 0))
 
 images = []
 measurements = []
@@ -79,7 +80,7 @@ else:
 
 
 print('Model created. Start Learning...')
-model.fit(X_train, y_train, validation_split = 0.1, shuffle = True, nb_epoch = 1)
+model.fit(X_train, y_train, validation_split = 0.1, shuffle = True, nb_epoch = 5)
 print('Learning done!. Saving model...')
 model.save(model_name)
 print('Finish!')
