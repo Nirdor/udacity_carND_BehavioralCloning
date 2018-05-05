@@ -17,12 +17,12 @@ with open('traindata/0/driving_log.csv') as f:
 with open('traindata/1/driving_log.csv') as f:
   reader = csv.reader(f)
   for line in reader:
-    lines.append((line, 0.35))
+    lines.append((line, 0.4))
 
 with open('traindata/-1/driving_log.csv') as f:
   reader = csv.reader(f)
   for line in reader:
-    lines.append((line, -0.35))
+    lines.append((line, -0.4))
     
 with open('traindata/recover/driving_log.csv') as f:
   reader = csv.reader(f)
@@ -70,7 +70,7 @@ y_train = np.array(measurements)
 
 print('Data ready. Create Model...')
 
-model_name = 'model_inc7.h5'
+model_name = 'model_inc9.h5'
 
 if os.path.exists(model_name):
   model = load_model(model_name, custom_objects = {'LRN':mod.LRN})
