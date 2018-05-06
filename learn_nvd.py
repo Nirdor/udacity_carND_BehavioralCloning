@@ -37,10 +37,10 @@ with open('traindata/additional/driving_log.csv') as f:
     lines.append((line, 0))
     #lines.append((line, 0))
     
-with open('traindata2/0/driving_log.csv') as f:
-  reader = csv.reader(f)
-  for line in reader:
-    lines.append((line, 0))
+# with open('traindata2/0/driving_log.csv') as f:
+  # reader = csv.reader(f)
+  # for line in reader:
+    # lines.append((line, 0))
 
 images = []
 measurements = []
