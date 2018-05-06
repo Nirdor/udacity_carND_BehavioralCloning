@@ -37,10 +37,10 @@ with open('traindata/additional/driving_log.csv') as f:
     lines.append((line, 0))
     #lines.append((line, 0))
     
-# with open('traindata2/driving_log.csv') as f:
-  # reader = csv.reader(f)
-  # for line in reader:
-    # lines.append((line, 0))
+with open('traindata2/data/driving_log.csv') as f:
+  reader = csv.reader(f)
+  for line in reader:
+    lines.append((line, 0))
 
 images = []
 measurements = []
@@ -78,7 +78,7 @@ y_train = np.array(measurements)
 
 print('Data ready. Create Model...')
 
-model_name = 'model_nvd14.h5'
+model_name = 'model_nvd15.h5'
 
 if os.path.exists(model_name):
   model = load_model(model_name, custom_objects = {'LRN':mod.LRN})
