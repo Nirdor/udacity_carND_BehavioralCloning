@@ -78,7 +78,7 @@ y_train = np.array(measurements)
 
 print('Data ready. Create Model...')
 
-model_name = 'model_nvd12.h5'
+model_name = 'model_nvd13.h5'
 
 if os.path.exists(model_name):
   model = load_model(model_name, custom_objects = {'LRN':mod.LRN})
@@ -87,7 +87,7 @@ else:
 
 
 print('Model created. Start Learning...')
-model.fit(X_train, y_train, validation_split = 0.1, shuffle = True, nb_epoch = 4)
+model.fit(X_train, y_train, validation_split = 0.1, shuffle = True, nb_epoch = 5)
 print('Learning done!. Saving model...')
 model.save(model_name)
 print('Finish!')
