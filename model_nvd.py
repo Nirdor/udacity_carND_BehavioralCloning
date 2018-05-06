@@ -29,9 +29,10 @@ def createModel():
   pre = Lambda(lambda x: x / 255 - 0.5)(inputs)
 
   #shape = (160, 320, 3)
-  layer1 = LRN()(pre)
-  layer1 = Convolution2D(24, 5, 5, border_mode = 'same', activation = 'relu')(layer1)
+  
+  layer1 = Convolution2D(24, 5, 5, border_mode = 'same', activation = 'relu')(pre)
   layer1 = MaxPooling2D(pool_size = (3, 3), strides = (2, 2), border_mode = 'same')(layer1)
+  #layer1 = LRN()(layer1)
 
   #shape = (80, 160, 24)
   layer2 = Convolution2D(36, 5, 5, border_mode = 'same', activation = 'relu')(layer1)
@@ -58,9 +59,9 @@ def createModel():
   drop2 = Dropout(0.3)(layer6)
 
   layer7 = Dense(50, activation = 'relu')(drop2)
-  drop3 = Dropout(0.3)(layer7)
+  drop3 = Dropout(0.2)(layer7)
 
-  layer8 = Dense(10, activation = 'relu')(drop3)
+  layer8 = Dense(25, activation = 'relu')(drop3)
   
   logits = Dense(1)(layer8)
 
