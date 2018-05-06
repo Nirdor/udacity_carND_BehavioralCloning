@@ -18,12 +18,12 @@ with open('traindata/0/driving_log.csv') as f:
 with open('traindata/1/driving_log.csv') as f:
   reader = csv.reader(f)
   for line in reader:
-    lines.append((line, 0.3))
+    lines.append((line, 0.35))
 
 with open('traindata/-1/driving_log.csv') as f:
   reader = csv.reader(f)
   for line in reader:
-    lines.append((line, -0.3))
+    lines.append((line, -0.35))
     
 with open('traindata/recover/driving_log.csv') as f:
   reader = csv.reader(f)
