@@ -16,7 +16,7 @@ from keras.models import load_model
 import h5py
 from keras import __version__ as keras_version
 
-from model_inc import LRN
+from model import LRN
 
 sio = socketio.Server()
 app = Flask(__name__)
