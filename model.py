@@ -96,7 +96,7 @@ if __name__ == '__main__':
     for line in reader:
       lines.append((line, -0.35))
 
-  #Data containing recover manoevers    
+  #Data containing recover maneuvers    
   with open('traindata/recover/driving_log.csv') as f:
     reader = csv.reader(f)
     for line in reader:
@@ -120,7 +120,7 @@ if __name__ == '__main__':
 
   print('Data ready. Create Model...')
 
-  model_name = 'modelasd.h5'
+  model_name = 'model.h5'
   model = createModel()
 
   print('Model created. Start Learning...')
