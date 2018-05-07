@@ -14,13 +14,13 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./traindata/0/IMG/center_2018_04_12_18_31_31_600.jpg "Center Lane Driving"
-[image2]: ./traindata/1/IMG/center_2018_04_12_18_49_43_075.jpg "Left Lane Driving"
-[image3]: ./traindata/-1/IMG/center_2018_04_12_19_03_37_564.jpg "Right Lane Driving"
-[image4]: ./traindata/recover/IMG/center_2018_05_06_14_43_05_441.jpg "Recovery Image 1"
-[image5]: ./traindata/recover/IMG/center_2018_05_06_14_43_06_903.jpg "Recovery Image 2"
-[image6]: ./traindata/recover/IMG/center_2018_05_06_14_43_07_391.jpg "Recovery Image 3"
-[image7]: ./flipped.jpg "Flipped Image"
+[image1]: ./writeup/center_2018_04_12_18_31_31_600.jpg "Center Lane Driving"
+[image2]: ./writeup/center_2018_04_12_18_49_43_075.jpg "Left Lane Driving"
+[image3]: ./writeup/center_2018_04_12_19_03_37_564.jpg "Right Lane Driving"
+[image4]: ./writeup/center_2018_05_06_14_43_05_441.jpg "Recovery Image 1"
+[image5]: ./writeup/center_2018_05_06_14_43_06_903.jpg "Recovery Image 2"
+[image6]: ./writeup/center_2018_05_06_14_43_07_391.jpg "Recovery Image 3"
+[image7]: ./writeup/flipped.jpg "Flipped Image"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
