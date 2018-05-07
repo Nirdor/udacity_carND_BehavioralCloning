@@ -1,6 +1,6 @@
+.ipynb_checkpoints
 __pycache__
 examples
-*.h5
 *.zip
 data
 data.zip
