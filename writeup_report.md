@@ -122,7 +122,7 @@ I then recorded one lap in each direction driving on the right edge of the track
 ![alt text][image2]
 ![alt text][image3]
 
-I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to recover if it gets to close to one edge. These images show what a recovery looks like starting from ... :
+I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to recover if it gets to close to one edge. These images show what a recovery looks like starting from the right edge of the track:
 
 ![alt text][image4]
 ![alt text][image5]
